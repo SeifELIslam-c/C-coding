@@ -69,6 +69,7 @@ void DisplayElement(const char * elementName){
 
 int main(void){
     char elementName[150];
+    while(1){
     string choose = get_string("choose if you want to search by: name, atomic number, mass number; ");
         if(strcmp(choose, "name") == 0){
         string elementName = get_string("enter the name of your atom (start with Capital): ");
@@ -190,6 +191,10 @@ int main(void){
                     DisplayElement(elementName);
                     }
                     
+                } else{
+                    printf("enter only what you see in the menu!!\n");
                 }
+
+    }
 
 }
