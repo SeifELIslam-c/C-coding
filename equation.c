@@ -4,7 +4,6 @@
 int main(){
     double a, b, c, delta, solution;
     while(1){
-
     printf("Enter the value of a: ");
     scanf("%lf",&a);
     printf("Enter the value of b: ");
@@ -12,7 +11,7 @@ int main(){
     printf("Enter the value of c: ");
     scanf("%lf",&c);
 
-    delta = pow(b, 2) - (4 * a * c);
+    delta = pow(b, 2) - (4 * a * c); getchar();
     if(delta < 0){
         printf("there are no solutions in R\n");
     } else if(a == 0 && b == 0){
@@ -30,8 +29,8 @@ int main(){
         printf("x2 = %.2lf\n", solution = (-b) - (sqrt(delta) / 2*a));
     } else if((delta == 0)){
         printf("there are only one solution which is: x = %.2lf\n", solution = (-b) / 2*a);
+    } else{
+        printf("enter only integers :^) ! \n");
     }
-
-        }
-
+        } return 0;
 }
