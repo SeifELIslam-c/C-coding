@@ -115,7 +115,7 @@ float flsubtract(float ne1, float ne2) {
 }
 
 int main(void) {
-    while (true) {
+    while (1) {
         string calc = get_string("Choose what type you need: double calc, int calc, long calc, float calc, or exit: ");
         if (strcmp(calc, "exit") == 0) {
             break;
@@ -134,8 +134,10 @@ int main(void) {
                 subtract(num1, num2);
             } else if (num2 == 0 && strcmp(answer, "/") == 0) {
                 printf("Error, you can't do this in maths!!\n");
-            } else {
+            } else if (strcmp(answer, "/") == 0){
                 divide(num1, num2);
+            } else {
+                printf("please enter only the chars that i've included!!\n");
             }
         } else if (strcmp(calc, "int calc") == 0) {
             int n1 = get_int("Enter the 1st number: ");
@@ -150,8 +152,10 @@ int main(void) {
                 intsubtract(n1, n2);
             } else if (n2 == 0 && strcmp(answer, "/") == 0) {
                 printf("Error, you can't do this in maths!!\n");
-            } else {
+            } else if (strcmp(answer, "/") == 0){
                 intdivide(n1, n2);
+            } else {
+                printf("please enter only the chars that i've included!!\n");
             }
         } else if (strcmp(calc, "long calc") == 0) {
             long nb1 = get_long("Enter the 1st number: ");
@@ -166,8 +170,10 @@ int main(void) {
                 lnsubtract(nb1, nb2);
             } else if (nb2 == 0 && strcmp(answer, "/") == 0) {
                 printf("Error, you can't do this in maths!!\n");
-            } else {
+            } else if (strcmp(answer, "/") == 0){
                 lndivide(nb1, nb2);
+            } else {
+                printf("please enter only the chars that i've included!!\n");
             }
         } else if (strcmp(calc, "float calc") == 0) {
             float ne1 = get_float("Enter the 1st number: ");
@@ -182,8 +188,10 @@ int main(void) {
                 flsubtract(ne1, ne2);
             } else if (ne2 == 0 && strcmp(answer, "/") == 0) {
                 printf("Error, you can't do this in maths!!\n");
-            } else {
+            } else if (strcmp(answer, "/") == 0){
                 fldivide(ne1, ne2);
+            } else {
+                printf("please enter only the chars that i've included!!\n");
             }
         }
     }
